@@ -118,8 +118,8 @@ export const portfolioData = {
     email: "srisasivarun@gmail.com",
     phone: "+91 7989782850",
     location: "Vijayawada, India",
-    githubUrl: "#", // PLACEHOLDER
-    linkedinUrl: "#" // PLACEHOLDER
+    githubUrl: "https://github.com/SASIVARUN-31047",
+    linkedinUrl: "https://www.linkedin.com/in/sasivarun510"
   },
   resumeUrl: "/resume.pdf" // PLACEHOLDER
 };
