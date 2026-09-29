@@ -12,8 +12,8 @@ const CodingProfile = () => {
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center'
+      alignItems: 'flex-start',
+      textAlign: 'left'
     },
     iconBg: {
       position: 'absolute',
@@ -40,7 +40,7 @@ const CodingProfile = () => {
     skillsGrid: {
       display: 'flex',
       flexWrap: 'wrap',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       gap: '1rem'
     },
     skillBadge: {
@@ -60,7 +60,7 @@ const CodingProfile = () => {
         <div className="glass" style={styles.card}>
           <Terminal size={300} style={styles.iconBg} />
           
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem', color: '#3b82f6' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1rem', color: '#3b82f6' }}>
             <Code2 size={32} />
           </div>
           

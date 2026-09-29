@@ -18,8 +18,8 @@ const Hero = () => {
     },
     grid: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '4rem',
+      gridTemplateColumns: '1.1fr 0.9fr',
+      gap: '60px',
       alignItems: 'center'
     },
     badgeContainer: {
@@ -141,7 +141,7 @@ const Hero = () => {
 
   return (
     <section id="home" style={styles.section}>
-      <div className="container" style={styles.grid} className="hero-grid">
+      <div className="container hero-grid" style={styles.grid}>
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

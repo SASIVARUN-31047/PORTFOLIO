@@ -33,7 +33,7 @@ const About = () => {
     },
     statCard: {
       padding: '1.5rem',
-      textAlign: 'center',
+      textAlign: 'left',
       display: 'flex',
       flexDirection: 'column',
       gap: '0.5rem'

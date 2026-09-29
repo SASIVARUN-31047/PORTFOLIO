@@ -8,7 +8,7 @@ const Resume = () => {
   const styles = {
     card: {
       padding: '4rem 2rem',
-      textAlign: 'center',
+      textAlign: 'left',
       background: 'linear-gradient(to right, rgba(15, 15, 30, 0.8), rgba(25, 25, 50, 0.8))',
       border: '1px solid rgba(59, 130, 246, 0.2)'
     },
@@ -21,13 +21,13 @@ const Resume = () => {
       color: 'var(--text-secondary)',
       fontSize: '1.1rem',
       maxWidth: '600px',
-      margin: '0 auto 2.5rem',
+      margin: '0 0 2.5rem 0',
       lineHeight: 1.6
     },
     actions: {
       display: 'flex',
       gap: '1rem',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       flexWrap: 'wrap'
     }
   };
@@ -36,7 +36,7 @@ const Resume = () => {
     <section id="resume">
       <div className="container">
         <div className="glass" style={styles.card}>
-          <h2 style={{...styles.title, background: 'none', WebkitTextFillColor: 'initial', textAlign: 'center'}}>
+          <h2 style={{...styles.title, background: 'none', WebkitTextFillColor: 'initial', textAlign: 'left'}}>
             Want to know more about my experience?
           </h2>
           <p style={styles.text}>

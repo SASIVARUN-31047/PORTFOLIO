@@ -15,8 +15,8 @@ const Certifications = () => {
       padding: '2.5rem 2rem',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center',
+      alignItems: 'flex-start',
+      textAlign: 'left',
       transition: 'transform 0.3s ease',
       cursor: 'pointer'
     },
@@ -26,7 +26,7 @@ const Certifications = () => {
       borderRadius: '50%',
       background: 'rgba(59, 130, 246, 0.1)',
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       justifyContent: 'center',
       color: '#3b82f6',
       marginBottom: '1.5rem'
@@ -45,7 +45,7 @@ const Certifications = () => {
     link: {
       marginTop: 'auto',
       display: 'inline-flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       gap: '0.5rem',
       color: '#3b82f6',
       fontSize: '0.9rem',
