@@ -1,6 +1,6 @@
 export const portfolioData = {
   hero: {
-    name: "Sasi Varun",
+    name: "Sri Sasi Varun",
     title: "AI-Focused Developer & Software Engineer",
     subtitle: "Computer Science Engineering student passionate about AI, full-stack development, problem solving, and building intelligent software systems.",
     badges: ["AI Developer", "Full Stack Developer", "Problem Solver", "Computer Science Engineer"],
