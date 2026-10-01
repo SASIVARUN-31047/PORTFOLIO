@@ -61,6 +61,7 @@ const Navbar = () => {
     navLinks: {
       display: 'flex',
       gap: '2rem',
+      paddingLeft: '16px',
       alignItems: 'center'
     },
     link: {
@@ -100,8 +101,9 @@ const Navbar = () => {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       gap: '2rem',
+      paddingLeft: '16px',
       zIndex: 999,
       transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)',
       transition: 'transform 0.4s ease'
@@ -114,7 +116,8 @@ const Navbar = () => {
         <div className="container" style={styles.container}>
           <a href="#home" style={styles.logo}>SASI VARUN</a>
           
-          <div className="desktop-nav" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <div className="desktop-nav" style={{ display: 'flex', gap: '2rem',
+      paddingLeft: '16px', alignItems: 'center' }}>
             <div style={styles.navLinks}>
               {navLinks.map((link) => (
                 <a 

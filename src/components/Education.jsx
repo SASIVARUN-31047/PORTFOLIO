@@ -109,7 +109,7 @@ const Education = () => {
       <style>{`
         @media (max-width: 768px) {
           .timeline-line { left: 30px !important; }
-          .timeline-item { flexDirection: column !important; alignItems: flex-end !important; }
+          .timeline-item { flexDirection: column !important; alignItems: flex-start !important; }
           .timeline-content { width: calc(100% - 70px) !important; }
           .timeline-empty { display: none !important; }
           .timeline-icon { left: 30px !important; }

@@ -207,8 +207,8 @@ const Hero = () => {
 
       <style>{`
         @media (max-width: 992px) {
-          .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
-          .hero-grid > div:first-child { display: flex; flexDirection: column; alignItems: center; }
+          .hero-grid { grid-template-columns: 1fr !important; text-align: left; gap: 40px !important; }
+          .hero-grid > div:first-child { display: flex; flexDirection: column; alignItems: flex-start; }
           .hero-visual { height: 350px !important; }
         }
         @keyframes spin { 100% { transform: rotate(360deg); } }
