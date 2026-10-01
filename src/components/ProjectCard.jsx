@@ -112,6 +112,26 @@ const ProjectCard = ({ project, reversed }) => {
   };
 
   const renderVisual = () => {
+    if (project.liveUrl && project.liveUrl !== '#') {
+      return (
+        <iframe 
+          src={project.liveUrl} 
+          title={project.title}
+          style={{
+            width: '250%',
+            height: '250%',
+            border: 'none',
+            transform: 'scale(0.4)',
+            transformOrigin: '0 0',
+            pointerEvents: 'none',
+            position: 'absolute',
+            top: 0,
+            left: 0
+          }}
+          scrolling="no"
+        />
+      );
+    }
     if (project.visualType === 'ai') {
       return (
         <div style={{ position: 'relative', width: '150px', height: '150px' }}>
