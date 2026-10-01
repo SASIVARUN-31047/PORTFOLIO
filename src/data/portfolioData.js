@@ -58,7 +58,7 @@ export const portfolioData = {
       ],
       technologies: ["Python", "Gemini API", "SpeechRecognition", "pyttsx3"],
       githubUrl: "#", // PLACEHOLDER
-      liveUrl: "#", // PLACEHOLDER
+      liveUrl: "https://jarvis-personal-ai.vercel.app/", // PLACEHOLDER
       visualType: "ai"
     },
     {
@@ -73,7 +73,7 @@ export const portfolioData = {
       ],
       technologies: ["Python", "Machine Learning", "Data Analytics", "Data Visualization", "IoT Data"],
       githubUrl: "#", // PLACEHOLDER
-      liveUrl: "#", // PLACEHOLDER
+      liveUrl: "https://ai-for-smart-cities.vercel.app/", // PLACEHOLDER
       visualType: "city"
     }
   ],
