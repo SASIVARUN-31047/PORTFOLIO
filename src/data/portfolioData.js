@@ -57,7 +57,7 @@ export const portfolioData = {
         "Command execution"
       ],
       technologies: ["Python", "Gemini API", "SpeechRecognition", "pyttsx3"],
-      githubUrl: "#", // PLACEHOLDER
+      githubUrl: "https://github.com/SASIVARUN-31047/Personal_AI_Assistant", // PLACEHOLDER
       liveUrl: "https://jarvis-personal-ai.vercel.app/", // PLACEHOLDER
       visualType: "ai"
     },
@@ -72,7 +72,7 @@ export const portfolioData = {
         "Urban data analysis"
       ],
       technologies: ["Python", "Machine Learning", "Data Analytics", "Data Visualization", "IoT Data"],
-      githubUrl: "#", // PLACEHOLDER
+      githubUrl: "https://github.com/SASIVARUN-31047/Ai-for-smart-cities", // PLACEHOLDER
       liveUrl: "https://ai-for-smart-cities.vercel.app/", // PLACEHOLDER
       visualType: "city"
     }
@@ -106,12 +106,12 @@ export const portfolioData = {
     {
       title: "Automation Anywhere Certification",
       date: "June 2026",
-      credentialUrl: "#" // PLACEHOLDER
+      credentialUrl: "https://www.credly.com/badges/304415b2-f70a-4e37-8e28-724ebcfb13e7/public_url" // PLACEHOLDER
     },
     {
       title: "Oracle Certification Badge",
       date: "May 2025",
-      credentialUrl: "#" // PLACEHOLDER
+      credentialUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C9C58AAABB89753614C5F00B2621110403034E87F15680B9828D516C9E533B69" // PLACEHOLDER
     }
   ],
   contact: {
