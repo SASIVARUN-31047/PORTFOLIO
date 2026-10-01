@@ -1,41 +1,34 @@
-import React, { useState } from 'react';
-import { Github, Linkedin } from './Icons';
+import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { Github, Linkedin } from './Icons';
 
 const Contact = () => {
   const { contact } = portfolioData;
-  const [formStatus, setFormStatus] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormStatus('Thanks! This demo form is frontend-only. Please use the email above to contact me.');
-    setTimeout(() => setFormStatus(''), 5000);
-    e.target.reset();
-  };
 
   const styles = {
     grid: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1.5fr',
-      gap: '4rem'
+      gridTemplateColumns: '1fr',
+      gap: '4rem',
+      maxWidth: '600px'
     },
     infoText: {
       color: 'var(--text-secondary)',
       fontSize: '1.1rem',
-      marginBottom: '2rem',
+      marginBottom: '2.5rem',
       lineHeight: 1.6
     },
     infoItem: {
       display: 'flex',
-      alignItems: 'flex-start',
-      gap: '1rem',
-      marginBottom: '1.5rem'
+      alignItems: 'center',
+      gap: '1.25rem',
+      marginBottom: '2rem'
     },
     iconBox: {
-      width: '40px',
-      height: '40px',
-      borderRadius: '8px',
+      width: '50px',
+      height: '50px',
+      borderRadius: '12px',
       background: 'rgba(59, 130, 246, 0.1)',
       display: 'flex',
       alignItems: 'center',
@@ -45,22 +38,22 @@ const Contact = () => {
     },
     infoTitle: {
       color: '#fff',
-      fontSize: '1rem',
+      fontSize: '1.1rem',
       fontWeight: '600',
       marginBottom: '0.25rem'
     },
     infoValue: {
       color: 'var(--text-secondary)',
-      fontSize: '0.95rem'
+      fontSize: '1rem'
     },
     socials: {
       display: 'flex',
       gap: '1rem',
-      marginTop: '2.5rem'
+      marginTop: '3rem'
     },
     socialIcon: {
-      width: '45px',
-      height: '45px',
+      width: '50px',
+      height: '50px',
       borderRadius: '50%',
       background: 'rgba(255, 255, 255, 0.05)',
       display: 'flex',
@@ -68,18 +61,6 @@ const Contact = () => {
       justifyContent: 'center',
       color: '#fff',
       transition: 'all 0.3s ease'
-    },
-    form: {
-      padding: '2.5rem'
-    },
-    statusMsg: {
-      marginTop: '1.5rem',
-      padding: '1rem',
-      background: 'rgba(59, 130, 246, 0.1)',
-      border: '1px solid rgba(59, 130, 246, 0.3)',
-      borderRadius: '8px',
-      color: '#fff',
-      fontSize: '0.9rem'
     }
   };
 
@@ -87,7 +68,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <h2>Let's Build Something Together</h2>
-        <div style={styles.grid} className="contact-grid">
+        <div style={styles.grid}>
           
           <div>
             <p style={styles.infoText}>
@@ -95,7 +76,7 @@ const Contact = () => {
             </p>
             
             <div style={styles.infoItem}>
-              <div style={styles.iconBox}><Mail size={20} /></div>
+              <div style={styles.iconBox}><Mail size={24} /></div>
               <div>
                 <h4 style={styles.infoTitle}>Email</h4>
                 <a href={`mailto:${contact.email}`} style={styles.infoValue} className="hover-link">{contact.email}</a>
@@ -103,7 +84,7 @@ const Contact = () => {
             </div>
             
             <div style={styles.infoItem}>
-              <div style={styles.iconBox}><Phone size={20} /></div>
+              <div style={styles.iconBox}><Phone size={24} /></div>
               <div>
                 <h4 style={styles.infoTitle}>Phone</h4>
                 <span style={styles.infoValue}>{contact.phone}</span>
@@ -111,59 +92,32 @@ const Contact = () => {
             </div>
             
             <div style={styles.infoItem}>
-              <div style={styles.iconBox}><MapPin size={20} /></div>
+              <div style={styles.iconBox}><MapPin size={24} /></div>
               <div>
                 <h4 style={styles.infoTitle}>Location</h4>
                 <span style={styles.infoValue}>{contact.location}</span>
               </div>
             </div>
 
-            <div style={{ marginTop: '2rem' }}>
-              <a href={`mailto:${contact.email}`} className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                <Mail size={18} /> Email Me
+            <div style={{ marginTop: '2.5rem', maxWidth: '300px' }}>
+              <a href={`mailto:${contact.email}`} className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}>
+                <Mail size={20} /> Email Me
               </a>
             </div>
 
             <div style={styles.socials}>
               <a href={contact.githubUrl} target="_blank" rel="noreferrer" style={styles.socialIcon} className="social-icon">
-                <Github size={20} />
+                <Github size={24} />
               </a>
               <a href={contact.linkedinUrl} target="_blank" rel="noreferrer" style={styles.socialIcon} className="social-icon">
-                <Linkedin size={20} />
+                <Linkedin size={24} />
               </a>
             </div>
-          </div>
-
-          <div className="glass" style={styles.form}>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label>Name</label>
-                <input type="text" className="form-control" required placeholder="Your Name" />
-              </div>
-              <div className="form-group">
-                <label>Email</label>
-                <input type="email" className="form-control" required placeholder="Your Email" />
-              </div>
-              <div className="form-group">
-                <label>Message</label>
-                <textarea className="form-control" rows="5" required placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '1rem' }}>
-                <Send size={18} /> Send Message
-              </button>
-              
-              {formStatus && (
-                <div style={styles.statusMsg}>{formStatus}</div>
-              )}
-            </form>
           </div>
 
         </div>
       </div>
       <style>{`
-        @media (max-width: 768px) {
-          .contact-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-        }
         .hover-link:hover { color: #3b82f6 !important; text-decoration: underline !important; }
         .social-icon:hover { background: #3b82f6 !important; transform: translateY(-3px); }
       `}</style>
