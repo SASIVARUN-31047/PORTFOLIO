@@ -57,16 +57,8 @@ const Education = () => {
       marginBottom: '0.5rem',
       display: 'block'
     },
-    degree: {
-      fontSize: '1.25rem',
-      color: '#fff',
-      marginBottom: '0.5rem'
-    },
-    institution: {
-      color: 'var(--text-secondary)',
-      marginBottom: '1rem',
-      fontSize: '1rem'
-    },
+    degree: { fontSize: '1.25rem', color: '#fff', marginBottom: '0.5rem' },
+    institution: { color: 'var(--text-secondary)', marginBottom: '1rem', fontSize: '1rem' },
     score: {
       display: 'inline-block',
       padding: '0.4rem 0.8rem',
@@ -82,37 +74,57 @@ const Education = () => {
     <section id="education">
       <div className="container">
         <h2>Education</h2>
-        <div style={styles.timeline} className="timeline">
-          <div style={styles.line} className="timeline-line"></div>
-          
+        <div style={styles.timeline} className="edu-timeline">
+          <div style={styles.line} className="edu-line"></div>
+
           {education.map((item, index) => {
             const isLeft = index % 2 === 0;
             return (
-              <div key={index} style={{...styles.item, flexDirection: isLeft ? 'row' : 'row-reverse'}} className="timeline-item">
-                <div style={styles.content} className="glass timeline-content">
+              <div
+                key={index}
+                style={{ ...styles.item, flexDirection: isLeft ? 'row' : 'row-reverse' }}
+                className="edu-item"
+              >
+                <div style={styles.content} className="glass edu-content">
                   <span style={styles.period}>{item.period}</span>
                   <h3 style={styles.degree}>{item.degree}</h3>
                   <p style={styles.institution}>{item.institution}</p>
                   <span style={styles.score}>{item.score}</span>
                 </div>
-                
-                <div style={styles.icon} className="timeline-icon">
+
+                <div style={styles.icon} className="edu-icon">
                   <GraduationCap size={24} />
                 </div>
-                
-                <div style={{ width: '45%' }} className="timeline-empty"></div>
+
+                <div style={{ width: '45%' }} className="edu-empty"></div>
               </div>
             );
           })}
         </div>
       </div>
+
       <style>{`
         @media (max-width: 768px) {
-          .timeline-line { left: 30px !important; }
-          .timeline-item { flexDirection: column !important; alignItems: flex-start !important; }
-          .timeline-content { width: calc(100% - 70px) !important; }
-          .timeline-empty { display: none !important; }
-          .timeline-icon { left: 30px !important; }
+          .edu-timeline { padding-left: 50px; }
+          .edu-line { left: 20px !important; transform: none !important; }
+          .edu-item {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            margin-bottom: 2.5rem;
+          }
+          .edu-content {
+            width: 100% !important;
+            padding: 1.25rem !important;
+          }
+          .edu-empty { display: none !important; }
+          .edu-icon {
+            position: absolute !important;
+            left: -40px !important;
+            top: 1.5rem !important;
+            transform: none !important;
+            width: 36px !important;
+            height: 36px !important;
+          }
         }
       `}</style>
     </section>
